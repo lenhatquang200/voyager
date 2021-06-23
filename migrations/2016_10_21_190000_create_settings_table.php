@@ -17,8 +17,8 @@ class CreateSettingsTable extends Migration
             $table->increments('id');
             $table->string('key')->unique();
             $table->string('display_name');
-            $table->string('value','max');
-            $table->string('details','max')->nullable()->default(null);
+            $table->string('value','255');
+            $table->string('details','255')->nullable()->default(null);
             $table->string('type');
             $table->integer('order')->default('1');
         });
